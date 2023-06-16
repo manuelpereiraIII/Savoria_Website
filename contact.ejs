@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--It is only like this (ejs) because I need to insert the private API key-->
+<html>
+	<head>
+		<title>Contact - Savoria</title>
+		<link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class='address'>
+			Savoria<br>
+			1234 123rd Ave N<br>
+			Berk WA 12345<br>
+			1-360-555-5555<br>
+		</div>
+		<br>
+		<form action="/send" class='contact'>
+			<h3>Contact</h3>
+			<input placeholder="Name" name="name"><br>
+			<input placeholder="Email" name="email" required><br>
+			<input placeholder="What do you want to say?" name="what"><br>
+			<input type="submit">
+		</form><br>
+		<iframe
+		  width="600"
+		  height="450"
+		  style="border:0"
+		  loading="lazy"
+		  allowfullscreen
+		  referrerpolicy="no-referrer-when-downgrade"
+		  src="https://www.google.com/maps/embed/v1/place?key=<%= API_KEY %>&q=Space+Needle,Seattle+WA"
+			class="maps">
+		</iframe>
+		<script src="script.js"></script>
+		<script src="headAndFoot.js"></script>
+	</body>
+</html>

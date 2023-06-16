@@ -1,0 +1,143 @@
+body{
+	background-color:#222;
+	color:rgb(255,255,255)
+}
+
+header {
+	background-color: #333;
+	padding: 10px;
+	color: #fff;
+	border-radius:5px;
+}
+
+header img{
+	width:100%;
+}
+
+header h1{
+	position:fixed;
+	left:50%;
+	text-align:center;
+	top:5%;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+nav{
+	text-align:center;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 10px;
+	background-color:#333;
+	transition:1s;
+	padding:5px;
+	border-radius:5px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav ul li:hover{
+	background-color:rgb(200,200,200);
+	transition:0.5s;
+}
+
+h1 {
+	text-align: center;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#menu-items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.menu-item {
+	border: 1px solid #ccc;
+	padding: 20px;
+	text-align: center;
+}
+
+.quantity-input {
+	width: 50px;
+}
+
+#calculate-total {
+	display: block;
+	margin: 20px auto;
+}
+
+#invoice {
+	text-align: center;
+	font-weight: bold;
+}
+footer{
+	background-color:#333;
+	width:100%;
+	padding:5px;
+	text-align:center;
+	border-radius:5px;
+}
+
+.address,.contact{
+	background-color:white;
+	color:black;
+	width:10%;
+	border-radius:10px;
+	padding:15px;
+	text-align:center;
+	margin:auto;
+	margin-top:10px;
+}
+.maps{
+	margin:auto;
+	border-radius:10px;
+}
+

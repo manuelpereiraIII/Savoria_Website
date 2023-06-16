@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Location - Savoria</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+			<h1>Restaurant Locations</h1>
+			<label for="state-dropdown">Select a state:</label>
+			<select id="state-dropdown">
+				<option value="" selected disabled>-- Select State --</option>
+			</select>
+			<br>
+			<label for="city-dropdown">Select a city:</label>
+			<select id="city-dropdown">
+				<option value="" selected disabled>-- Select City --</option>
+			</select>
+			<script src="headAndFoot.js"></script>
+			<script src="script.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+			<script>
+				$(document).ready(function () {
+					// JSON object containing states and cities
+					var locations = {
+						"California": ["Los Angeles", "San Francisco", "San Diego"],
+						"New York": ["New York City", "Buffalo", "Rochester"],
+						"Texas": ["Houston", "Dallas", "Austin"]
+					};
+	
+					// Populate states dropdown
+					$.each(locations, function (state) {
+						$('#state-dropdown').append($('<option></option>').text(state));
+					});
+	
+					// Handle state selection
+					$('#state-dropdown').change(function () {
+						var selectedState = $(this).val();
+						var cities = locations[selectedState];
+	
+						// Clear previous city options
+						$('#city-dropdown').empty();
+	
+						// Populate cities dropdown
+						$.each(cities, function (index, city) {
+							$('#city-dropdown').append($('<option></option>').text(city));
+						});
+					});
+				});
+			</script>
+		</body>
+</html>
